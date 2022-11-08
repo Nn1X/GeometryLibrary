@@ -1,4 +1,4 @@
-namespace GeometryLibrary.Test
+namespace GeometryLibrary.Tests
 {
 	public class TriangleTest
 	{
