@@ -2,7 +2,7 @@
 
 namespace GeometryLibrary
 {
-	public class Circle : ISquare
+	public class Circle : IArea
 	{
 		public const double MinRadius = 1e-6;
 
@@ -16,7 +16,7 @@ namespace GeometryLibrary
 
 		public double Radius { get; }
 
-		public double GetSquare()
+		public double GetArea()
 		{
 			return Math.PI * Math.Pow(Radius, 2d);
 		}

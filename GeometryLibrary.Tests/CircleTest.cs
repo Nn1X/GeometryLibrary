@@ -1,6 +1,6 @@
 ﻿
 
-namespace GeometryLibrary.Test
+namespace GeometryLibrary.Tests
 {
     public class CircleTest
     {
@@ -28,15 +28,15 @@ namespace GeometryLibrary.Test
 
 
 		[Fact]
-		public void GetSquareTest()
+		public void GetAreaTest()
 		{
 			var radius = 5;
 			var circle = new Circle(radius);
 			var expectedValue = Math.PI * Math.Pow(radius, 2d);
 
-			var square = circle.GetSquare();
+			var area = circle.GetArea();
 
-			var result = Math.Abs(square - expectedValue) < eps;
+			var result = Math.Abs(area - expectedValue) < eps;
 
 			result.ShouldBeOfType<bool>();
 			result.ShouldBe(true);

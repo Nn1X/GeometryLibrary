@@ -2,7 +2,7 @@
 
 namespace GeometryLibrary
 {
-    public class Triangle : ISquare
+    public class Triangle : IArea
     {
         public const double eps = Constants.CalculationAccuracy;
         private readonly Lazy<bool> _isRightTriangle;
@@ -24,12 +24,12 @@ namespace GeometryLibrary
         public double EdgeC { get; set; }
         public bool IsRightTriangle => _isRightTriangle.Value;
 
-        public double GetSquare()
+        public double GetArea()
         {
             var halfP = (EdgeA + EdgeB + EdgeC) / 2d;
-            var square = Math.Sqrt(halfP * (halfP - EdgeA) * (halfP - EdgeB) * (halfP - EdgeC));
+            var area = Math.Sqrt(halfP * (halfP - EdgeA) * (halfP - EdgeB) * (halfP - EdgeC));
 
-            return square;
+            return area;
         }
 
         /// <exception cref="ArgumentException"></exception>

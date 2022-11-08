@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace GeometryLibrary
 {
-    public static class Square
+    public static class Area
     {
-        public static double GetSquare(ISquare square)
+        public static double GetArea(IArea area)
         {
-            return square.GetSquare();
+            return area.GetArea();
         }
     }
 }

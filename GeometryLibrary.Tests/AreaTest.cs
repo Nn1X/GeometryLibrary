@@ -6,20 +6,20 @@ using System.Threading.Tasks;
 
 namespace GeometryLibrary.Tests
 {
-    public class SquareTest
+    public class AreaTest
     {
 		private const double eps = 1e-7;
 
         [Fact]
-		public void GetSquareTest()
+		public void GetAreaTest()
 		{
             #region Circle
             var radius = 5d;
 			var expectedCircleValue = Math.PI * Math.Pow(radius, 2d);
-			ISquare sqCircle = new Circle(radius);
-			var squareCircle = Square.GetSquare(sqCircle);
+			IArea arCircle = new Circle(radius);
+			var areaCircle = Area.GetArea(arCircle);
 
-			var circleResult = Math.Abs(squareCircle - expectedCircleValue) < eps;
+			var circleResult = Math.Abs(areaCircle - expectedCircleValue) < eps;
 
 			circleResult.ShouldBeOfType<bool>();
 			circleResult.ShouldBe(true);
@@ -28,11 +28,11 @@ namespace GeometryLibrary.Tests
 			#region Triangle
 			double a = 3d, b = 4d, c = 5d;
 			double expectedTriangleValue = 6d;
-			ISquare sqTriangle = new Triangle(a, b, c);
+			IArea arTriangle = new Triangle(a, b, c);
 
-			var squareTriangle = Square.GetSquare(sqTriangle);
+			var areaTriangle = Area.GetArea(arTriangle);
 
-			var triangleResult = Math.Abs(squareTriangle - expectedTriangleValue) < Constants.CalculationAccuracy;
+			var triangleResult = Math.Abs(areaTriangle - expectedTriangleValue) < Constants.CalculationAccuracy;
 
 			triangleResult.ShouldBeOfType<bool>();
 			triangleResult.ShouldBe(true);

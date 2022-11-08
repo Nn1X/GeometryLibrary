@@ -39,7 +39,7 @@ namespace GeometryLibrary.Test
 		}
 
 		[Fact]
-		public void GetSquareTest()
+		public void GetAreaTest()
 		{
 			// Arrange.
 			double a = 3d, b = 4d, c = 5d;
@@ -47,12 +47,12 @@ namespace GeometryLibrary.Test
 			var triangle = new Triangle(a, b, c);
 
 			// Act.
-			var square = triangle?.GetSquare();
+			var area = triangle?.GetArea();
 
 			// Assert.
-			Assert.NotNull(square);
+			Assert.NotNull(area);
 
-			var result = Math.Abs(square.Value - expectedValue) < Constants.CalculationAccuracy;
+			var result = Math.Abs(area.Value - expectedValue) < Constants.CalculationAccuracy;
 
 			result.ShouldBeOfType<bool>();
 			result.ShouldBe(true);
